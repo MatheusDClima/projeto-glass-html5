@@ -1,0 +1,228 @@
+
+@charset "utf-8"; /* para verificar assentuação */
+@import url ('https://fonts.googleapis.com/css2? família=Titillium+Web&display=swap');
+@font-face {
+    font-family: 'fonte logo';
+    src: url("../../_fonts/bubblegum-sans-regular.otf");
+}
+body { background-color: #dddddd;
+       color: rgba(0, 0, 0, 1);
+    font-family: Arial;
+}
+div#interface {
+    width: 900px;
+    background-color: white;
+    margin: -1px auto 0 auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .6);
+    padding: 10px;
+}
+
+p {
+    text-align: justify;
+    text-indent: 50px;
+}
+a {
+    color: #606060;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+header#cabecalho img#icone {
+    position: absolute;
+    left: 1000px;
+    top: 80px;
+}
+header#cabecalho {
+    border-bottom: 2px lightgrey solid;
+    height: 150px;
+    background: url("../../_imagens/glass-logo-peq.jpg") no-repeat 0 80px;
+}
+header#cabecalho h1{
+    font-family: 'fonte logo', sans-serif;
+    font-size: 30pt;
+    color: #606060;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.5);
+    padding: 0;
+    margin-bottom: 0;
+}
+header#cabecalho h2{
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 15pt;
+    color: #888888;
+    padding: 0;
+    margin-top: 0;
+}
+
+/* formatação de imagens com legendas  */
+
+figure.foto-legenda {
+    position: relative; /* usado paraque o figcaption tenha uma posição relativa dentro dafigura*/
+    border: 8px solid white;  /* estilo da borda */
+    box-shadow: 1px 1px 4px black; /* sombra da borda */
+}
+
+figure.foto-legenda img {
+    width: 100%; /*largura*/
+    height: 100%; /* tamanho , se aumentar ou diminuir a tela,o arquivo aumenta e diminui tbm*/
+}
+figure.foto-legenda figcaption {
+    opacity: 0;
+    position: absolute; /*vai ter uma posição absoluta dentro da borda branca*/
+    top: 0; /*  */
+    background-color: rgba(0, 0, 0, .4); /*criar uma transparencia de 0.4*/
+    color: white; /* fazer aletra ficar branca*/
+    width: 100%;  /*borda preta  ocupar todo o espaço dentro da imagem*/
+    height: 100%; /*borda preta  ocupar todo o espaço dentro da imagem*/
+    padding: 10px;  /* espaço maior dentro da legenda*/
+    box-sizing: border-box; /* criar um box dentro da borda*/
+    transition: opacity 1s; /* para a opassidade do hover figcaption durar 1 segundo */
+}
+figure.foto-legenda:hover figcaption { /*quando passar o mouse por cima da imagem terá: */
+    opacity: 1; /* opacidade de 1, só vai aparecer a legenda quandoo mouse passar por cima da imagem */
+}
+
+/* formatação do menu */
+
+nav#menu{
+    display: block; /* para o menu ser exibido como um bloco, um bloco pode flutuar na tela */
+
+}
+
+nav#menu ul {
+    list-style: none; /* sumir com os marcadores, as bolinhas antes do menu*/
+    text-transform: uppercase; /* uppercase deixa todas as letras em maiúsculas */
+    position: absolute; /* posição absoluta para a lista ficar livre no site, colocare qualquer lugar da tela, posição relativa fica presa apenas em um tópico */
+    top: -11px; /* para ficar no topo do site */
+    left: 554px; /* distância do lado esquerdo */
+}
+nav#menu li {
+    display: inline-block; /* para o bloco ser exibido na mesma linha, um ao lado do outro*/
+    background-color: #dddddd; /* padrão cinza claro */
+    padding: 8px; /* criar um espaço dentro da caixa, dentro do botão */
+    margin: 2px; /* controlar o espaço fora da caixa */
+    -ms-transition: background-color 1s; /* quando passar o mouse por cima, vai ter a transição e vai levar 1 segundo */
+}
+nav#menu li:hover { /* um efeito para quando eu mover o mouse por cima do li*/
+    background-color: transparent;
+}
+nav#menu a{
+    color: black;
+    text-decoration: none;
+}
+nav#menu h1{
+    display: none; /* esconter o nome Menu Principal */
+}
+/* divisão do meu site */
+
+section#corpo {
+    display: block;  /*ser mostrado como um bloco*/
+    width: 500px; /* largura */
+    float: left; /* flutuar no lado esquerdo, paraflutuar tem que estar em bloco */
+    border-right: 2px solid lightgrey;
+    padding-right: 15px;
+}
+article#noticia-principal h2 {
+    font-size: 13pt;
+    color: #606060;
+    background-color: #dddddd;
+    padding: 5px 0 5px 10;
+    margin: 10px 0 10px 0;
+}
+header#cabecalho-artigo h1 {
+    font-family: "fonte logo", sans-serif;
+    font-size: 20pt;
+    color: #606060;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+header#cabecalho-artigo h2{
+    font-size: 13pt;
+    color: cecece;
+    background-color: #ffffff;
+    margin: 0;
+}
+header#cabecalho-artigo h3 {
+    font-size: 12px;
+    color: #606060;
+
+}
+.direita {
+    text-align: right;
+}
+table#tabelaspec {
+    border: 1px solid grey;
+    border-spacing: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+table#tabelaspec td {
+    border: 1px solid grey;
+    padding: 10px;
+    text-align: right;
+    vertical-align: top;
+}
+table#tabelaspec td.ce {
+    color: white;
+    background-color: #606060;
+    vertical-align: top;
+    font-weight: bold;
+}
+table#tabelaspec td.cd{
+    background-color: lightgrey;
+    text-align: left;
+}
+table#tabelaspec caption{
+    color: #888888;
+    font-size: 13pt;
+    font-weight: bolder;
+}
+table#tabelaspec caption span {
+    display: block;
+    float: right;
+    color: black;
+    font-size: 8pt;
+    margin-top: 10px;
+}
+
+video#filme {
+	display: block;
+	position: relative;
+	width: 507px;
+}
+
+aside#lateral {
+    display: block;
+    width: 350px;
+    float: right; /* flutuar pelo lado direito */
+    background-color: #dddddd;
+    padding: 10px;
+    margin-top: 10px;
+    box-shadow: 2px 2px 2px rgba(0,0,0,.5);
+}
+aside#lateral h1{
+    font-family: "fonte logo", sans-serif;
+    font-size: 20pt;
+    color: #606060;
+    margin-top: 0;
+}
+aside#lateral h2 {
+ background-color: #606060;
+    font-size: 13pt;
+    color: white;
+    padding: 5px;
+}
+
+aside#lateral  video#filme {
+	display: block;
+	position: relative;
+	width: 350px;
+}
+
+footer#rodape {
+    clear: both;  /* para que o rodapé seja mostrado fora da divisão, e fique nolugar correto */
+    border-top: 2px solid lightgrey; /* pra linha ficar acima do rodapé */
+}
+footer#rodape p{
+    text-align: center;
+{

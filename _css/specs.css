@@ -1,0 +1,17 @@
+@charset "UTF-8";
+ 
+section#conteudo {
+	width: 1000px;
+	margin: auto;
+	}
+
+iframe#frame-spec { /* Iframe serve para carregar uma imagem ou o conteúdo de um outro documento na lateral*/
+	width: 400px;
+	height: 280px;
+	border: none;
+	overflow: hidden; /* Remover a visualização de um conteúdo*/
+}
+
+iframe#frame-spec::-webkit-scrollbar { /*Para esconder as barras de rolagem*/
+	display: none;
+}
